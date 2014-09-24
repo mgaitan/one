@@ -9,14 +9,14 @@ try:
 except ImportError:
     from distutils.core import setup
 
-version = "0.2"
+version = "0.2.1"
 
 if sys.argv[-1] == 'publish':
     try:
         import wheel
     except ImportError:
         raise ImportError("Fix: pip install wheel")
-    os.system('python setup.py sdist bdist_wheel upload')
+    os.system('sudo python setup.py sdist bdist_wheel upload')
     print("Tagging now:")
     os.system("git tag -a v%s -m 'version %s'" % (version, version))
     os.system("git push --tags")

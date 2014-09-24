@@ -67,22 +67,19 @@ Patterns and use cases
         # using one
         return one(iterable, cmp)
 
-Another pattern, is in a complex guard
+Another pattern, is in a complex condition
 
 .. code-block:: python
 
 
-        if (a and not b and not c) or
-            (b and not a and not c) or
-             (c and not a and not b):
+        if ((a and not b and not c) or
+             (b and not a and not c) or
+              (c and not a and not b)):
             do_something()
 
         # using one
-        if not one((a, b, c)):
+        if one((a, b, c)):
             do_something()
-
-
-
 
 
 A very frequent case is when you have values that must exclude each others.
