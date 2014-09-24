@@ -1,3 +1,6 @@
+from __future__ import print_function   # noqa
+
+
 def one(iterable, cmp=None):
     """
     Return the object in the given iterable that evaluates to True.
@@ -38,5 +41,4 @@ def test():
 
 if __name__ == "__main__":
     import timeit
-    from __future__ import print_function   # noqa
     print(timeit.timeit("test()", setup="from __main__ import test", number=100))
