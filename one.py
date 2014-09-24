@@ -5,18 +5,18 @@ def one(iterable):
     If the given iterable has more than one object that evaluates to True,
     or if there is no object that fulfills such condition, return False.
 
-    >>> one((True, False, False))
-    True
-    >>> one((True, False, True))
-    False
-    >>> one((0, 0, 'a'))
-    'a'
-    >>> one((0, False, None))
-    False
-    >>> one((True, True))
-    False
-    >>> bool(one(('', 1)))
-    True
+        >>> one((True, False, False))
+        True
+        >>> one((True, False, True))
+        False
+        >>> one((0, 0, 'a'))
+        'a'
+        >>> one((0, False, None))
+        False
+        >>> one((True, True))
+        False
+        >>> bool(one(('', 1)))
+        True
     """
     the_one = False
     for i in iterable:
