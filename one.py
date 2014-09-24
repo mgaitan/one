@@ -1,5 +1,6 @@
 def one(iterable):
-    """Return the object in the given iterable that evaluates to True.
+    """
+    Return the object in the given iterable that evaluates to True.
 
     If the given iterable has more than one object that evaluates to True,
     or if there is no object that fulfills such condition, return False.
@@ -17,15 +18,13 @@ def one(iterable):
     >>> bool(one(('', 1)))
     True
     """
-    iterable = iter(iterable)
-    for item in iterable:
-        if item:
-            break
-    else:
-        return False
-    if any(iterable):
-        return False
-    return item
+    the_one = False
+    for i in iterable:
+        if i:
+            if the_one:
+                return False
+            the_one = i
+    return the_one
 
 
 if __name__ == "__main__":
