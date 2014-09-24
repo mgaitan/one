@@ -56,6 +56,16 @@ A very frequent case is when you have values that must exclude each others.
 
 
 
+        not all(iterable) or not any(iterable)
 
-.. attention:: send me your examples!
+
+
+Send me your examples!
+
+
+Performance
+-----------
+
+There are some performance comparissions in `this notebook <http://nbviewer.ipython.org/github/mgaitan/one/blob/master/testbenchs.ipynb>`_
+
 
