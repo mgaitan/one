@@ -35,19 +35,30 @@ Examples:
     >>> one((10, 20, 30, 42), lambda i: i > 40)
     42
 
-Install
---------
+Install & usage
+---------------
 
-::
+Install it via pip::
 
-    pip install one
+   $ pip install one
 
-Usage
------
+.. code-block:: python
 
-::
+   from one import one
 
-    from one import one
+Since the version 0.6.3 ``one`` is also part of the wonderful library boltons_. So, alternatively
+you can install that::
+
+   $ pip install boltons
+
+And import ``one``
+
+.. code-block:: python
+
+   from boltons.iterutils import one
+
+
+.. _boltons: https://github.com/mahmoud/boltons
 
 
 
