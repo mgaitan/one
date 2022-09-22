@@ -1,6 +1,8 @@
 from __future__ import print_function   # noqa
 
 
+_SENTINEL = object()
+
 def one(iterable, cmp=None):
     """
     Return the object in the given iterable that evaluates to True.
@@ -26,13 +28,13 @@ def one(iterable, cmp=None):
         >>> one((10, 20, 30, 42), lambda i: i > 40)
         42
     """
-    the_one = False
+    the_one = _SENTINEL  # see issue #1
     for i in iterable:
         if cmp(i) if cmp else i:
-            if the_one:
+            if the_one is not _SENTINEL:
                 return False
             the_one = i
-    return the_one
+    return False if the_one is _SENTINEL else the_one
 
 
 def test():
